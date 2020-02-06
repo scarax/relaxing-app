@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Audio meditation</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section class="app">
+    <h1 class="visually-hidden">Meditation app</h1>
+    <div class="time-select">
+      <button data-time="120">2 Minutes</button>
+      <button data-time="300">5 Minutes</button>
+      <button data-time="480">8 Minutes</button>
+    </div>
+    <div class="audio-player">
+      <audio class="app__sound">
+        <source src="audio/rain.mp3">
+      </audio>
+      <button class="play-button" aria-label="play button">
+        <img class="play-button__icon" src="img/play.svg" alt="play button icon">
+        <svg class="track-outline" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="226.5" cy="226.5" r="216.5" stroke="black" stroke-width="20" />
+        </svg>
+        <svg class="animated-outline" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="226.5" cy="226.5" r="216.5" stroke="#0366d6" stroke-width="20" />
+        </svg>
+      </button>
+      <h3 class="time-display">0:00</h3>
+    </div>
+    <div class="sound-picker">
+      <button class="sound-picker__button sound-picker__button--rain" data-sound="audio/rain.mp3" data-video="video/rain.mp4">
+        <svg>
+          <use href="img/rain.svg#rain"></use>
+        </svg>
+      </button>
+      <button class="sound-picker__button sound-picker__button--sun" data-sound="audio/beach.mp3" data-video="video/beach.mp4">
+        <svg>
+          <use href="img/sun.svg#sun"></use>
+        </svg>
+      </button>
+    </div>
+    <video class="video-bg" src="video/rain.mp4" type="video/mp4" loop></video>
+  </section>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
